@@ -35,7 +35,7 @@ function AdminPage() {
   };
 
   const handleVisitUser = (targetUser) => {
-    navigate('/main', { state: { visitedUser: targetUser } });
+    navigate('/main/'+targetUser, { state: { visitedUser: targetUser } });
   };
 
   if (!admin) return <div>로딩중...</div>;
@@ -70,7 +70,7 @@ function AdminPage() {
                   <td>{user.userPw}</td>
                   {/* [수정] 순서 변경: 방문 버튼 -> 삭제 버튼 */}
                   <td>
-                    <button className="visit-btn" onClick={() => handleVisitUser(user)}>방문</button>
+                    <button className="visit-btn" onClick={() => handleVisitUser(user.userId)}>방문</button>
                   </td>
                   <td>
                     <button className="delete-btn" onClick={() => handleDeleteUser(user.userId)}>삭제</button>
@@ -123,7 +123,7 @@ function MainPage() {
     <div className="main-white-page">
       <h1>모먼트 프로젝트 ~ </h1>
       <p> 미영아 이제 뭘 하면 돼 ? <strong>{user.userName}</strong>님!</p>
-      <p>우리 맛난 거 먹울래 ?</p>
+      <p>우리 맛난 거 먹울래 ??</p>
       
       {isVisitorMode ? (
         <button className="logout-btn return-admin" onClick={() => navigate('/admin')}>
