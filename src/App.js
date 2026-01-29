@@ -123,7 +123,7 @@ function MainPage() {
     <div className="main-white-page">
       <h1>모먼트 프로젝트 ~ </h1>
       <p> 미영아 이제 뭘 하면 돼 ? <strong>{user.userName}</strong>님!</p>
-      <p>우리 맛난 거 먹울래 ?</p>
+      <p>우리 맛난 거 먹울래 ??</p>
       
       {isVisitorMode ? (
         <button className="logout-btn return-admin" onClick={() => navigate('/admin')}>
