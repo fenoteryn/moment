@@ -1,0 +1,308 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f5f6f7;
+}
+
+/* === 로그인 & 회원가입 화면 공통 스타일 === */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-box {
+  width: 700px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* 로고 이미지 */
+.logo-area {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+.logo-img {
+  width: 500px; 
+  height: auto;
+  object-fit: contain;
+  border: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.login-box h2 { 
+  margin-bottom: 30px; 
+  color: #333;
+  font-size: 24px;
+  cursor: default;
+}
+
+/* 입력창 스타일 */
+.input-field {
+  width: 50%;
+  padding: 12px;
+  margin: 0 auto 15px auto; 
+  display: block;
+  border: 2px solid #FFD700; 
+  border-radius: 10px;
+  box-sizing: border-box;
+  outline: none;
+  user-select: auto; 
+  -webkit-user-select: auto;
+  cursor: text;
+}
+
+.input-field:focus {
+  border-color: #FFC107;
+}
+.input-field::placeholder {
+  color: #aaa;
+  user-select: none;
+}
+
+/* 버튼 그룹 */
+.button-group {
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  margin: 15px auto 0 auto; 
+}
+
+/* 버튼 스타일 */
+.login-btn, .membership {
+  flex: 1;
+  padding: 12px;
+  background-color: white;
+  color: #333;
+  border: 2px solid #aaa; 
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s;
+  user-select: none; 
+}
+
+.login-btn:hover, .membership:hover {
+  background-color: #f0f0f0;
+  border-color: #888;
+}
+
+/* 하단 링크 */
+.find-links {
+  width: 47%; 
+  margin: 10px auto 0 auto; 
+  text-align: right; 
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* === 메인 화면 === */
+.main-white-page {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn.small {
+  margin-top: 0;
+  padding: 8px 15px;
+  font-size: 12px;
+}
+
+/* === [추가] 관리자 복귀 버튼 === */
+.logout-btn.return-admin {
+  background-color: #FFD700; /* 노란색 */
+  color: white;
+  font-weight: bold;
+}
+
+.logout-btn.return-admin:hover {
+  background-color: #FFC107;
+}
+
+/* === 회원가입 & 찾기 창 전용 (좁은 박스) === */
+.signup-box {
+  width: 450px; 
+}
+.signup-box .input-field {
+  width: 90%; 
+}
+.signup-box .button-group {
+  width: 90%; 
+}
+
+/* === 탭 버튼 스타일 === */
+.tab-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #888;
+}
+
+.tab-btn.active {
+  border-color: #FFD700;
+  color: #333;
+  background-color: #FFF9C4; 
+}
+
+/* === 팝업창 (Modal) 스타일 === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: 3px solid #FFD700;
+}
+
+.modal-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.modal-close-btn {
+  background-color: #FFD700;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-close-btn:hover {
+  background-color: #FFC107;
+}
+
+/* === 관리자 페이지 스타일 === */
+.admin-bg {
+  background-color: #f0f2f5; 
+}
+
+.admin-container {
+  max-width: 950px; /* 테이블 너비 때문에 조금 늘림 */
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 2px solid #ddd;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 10px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-table th, .user-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.user-table th {
+  background-color: #FFF9C4;
+  color: #333;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #fa5252;
+}
+
+/* [추가] 방문 버튼 스타일 */
+.visit-btn {
+  background-color: #339af0; /* 파란색 */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.visit-btn:hover {
+  background-color: #228be6;
+}
